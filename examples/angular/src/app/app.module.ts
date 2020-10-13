@@ -1,4 +1,3 @@
-
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -10,13 +9,15 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeModule} from './home/home';
 import {todoReducer} from './todos/reducers/reducers';
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     AppRoutingModule, BrowserModule, BrowserAnimationsModule, MaterialModule, HomeModule,
     StoreModule.forRoot({todoReducer}),
-    BrowserModule.withServerTransition({ appId: 'angular-bazel-example' })
+    BrowserModule.withServerTransition({ appId: 'angular-bazel-example' }),
+    SharedModule.forRoot()
   ],
   exports: [AppComponent],
   bootstrap: [AppComponent],

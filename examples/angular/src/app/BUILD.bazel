@@ -13,6 +13,7 @@ ng_ts_library(
     deps = [
         "//src/app/hello-world",
         "//src/app/home",
+        "//src/app/shared",
         "//src/app/todos",
         "//src/app/todos/reducers",
         "//src/shared/material",

@@ -26,6 +26,7 @@ ng_ts_library(
     ],
     tsconfig = "//src:tsconfig.json",
     deps = [
+        "//src/app/shared",
         "//src/lib/shorten",
         "//src/shared/material",
         "@npm//@angular/core",
